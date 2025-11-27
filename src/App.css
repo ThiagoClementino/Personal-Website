@@ -1,0 +1,235 @@
+/* --- Variáveis e Temas --- */
+:root {
+  --primary: #222222;
+  --secondary: #7b7b7b;
+  --bg-body: #f8f8f8;
+  --bg-card: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --text-main: #222222;
+  --text-muted: #7b7b7b;
+  --shadow: rgba(0, 0, 0, 0.05);
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --primary: #ffffff;
+  --secondary: #a0a0a0;
+  --bg-body: #1a1a1a; /* Um pouco mais escuro que #222 para contraste */
+  --bg-card: #222222;
+  --bg-header: rgba(34, 34, 34, 0.95);
+  --text-main: #f8f8f8;
+  --text-muted: #a0a0a0;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* --- Reset e Globais --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: var(--transition);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.section-padding {
+  padding: 100px 0;
+}
+
+/* --- Botões --- */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--primary);
+  color: var(--bg-body);
+}
+
+/* --- Header & Nav --- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg-header);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--shadow);
+  transition: var(--transition);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* Desktop Menu */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--primary);
+  margin-left: 20px;
+}
+
+/* Mobile Menu Button */
+.mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+/* --- Hero --- */
+#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* --- Cards de Projetos --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: transform 0.3s ease, border 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid transparent;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--secondary);
+}
+
+.project-header h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.project-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* Botões do Card */
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 15px;
+  border-top: 1px solid var(--shadow);
+  padding-top: 15px;
+}
+.action-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.action-link:hover {
+  color: var(--primary);
+}
+.deploy-badge {
+  color: #0070f3;
+} /* Cor azul característica da Vercel/Web */
+
+/* --- Mobile Styles --- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--bg-card);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  .mobile-btn {
+    display: block;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+}
