@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container navbar-content">
         <a href="#" className="logo">
-          THIAGO<span className="accent-text">.PORTFOLIO</span>
+          DEV<span className="accent-text">.PORTFOLIO</span>
         </a>
 
         {/* Desktop Menu */}
@@ -41,18 +41,18 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        {/* <div className="mobile-toggle">
+        <div className="mobile-toggle">
           <button onClick={toggleTheme} className="theme-toggle-btn">
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button onClick={() => setIsOpen(!isOpen)} className="menu-btn">
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
-        </div> */}
+        </div>
       </div>
 
       {/* Mobile Menu */}
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -74,7 +74,7 @@ const Navbar = () => {
             </div>
           </motion.div>
         )}
-      </AnimatePresence> */}
+      </AnimatePresence>
     </nav>
   );
 };
