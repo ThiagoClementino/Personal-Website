@@ -14,7 +14,7 @@
 [data-theme="dark"] {
   --primary: #ffffff;
   --secondary: #a0a0a0;
-  --bg-body: #1a1a1a; /* Um pouco mais escuro que #222 para contraste */
+  --bg-body: #1a1a1a;
   --bg-card: #222222;
   --bg-header: rgba(34, 34, 34, 0.95);
   --text-main: #f8f8f8;
@@ -28,6 +28,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -38,6 +39,7 @@ body {
   color: var(--text-main);
   transition: var(--transition);
   overflow-x: hidden;
+  padding-top: 70px;
 }
 
 a {
@@ -45,15 +47,18 @@ a {
   color: inherit;
   transition: var(--transition);
 }
+
 ul {
   list-style: none;
 }
 
+/* --- Container --- */
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
 .section-padding {
   padding: 100px 0;
 }
@@ -68,70 +73,12 @@ ul {
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
-}
-.btn:hover {
-  background-color: var(--primary);
-  color: var(--bg-body);
-}
-
-/* --- Header & Nav --- */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--bg-header);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid var(--shadow);
   transition: var(--transition);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-
-/* Desktop Menu */
-.nav-links {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-.nav-links a {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-.nav-links a:hover {
-  color: var(--primary);
-}
-
-/* Theme Toggle */
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: var(--primary);
-  margin-left: 20px;
-}
-
-/* Mobile Menu Button */
-.mobile-btn {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--primary);
-  cursor: pointer;
+.btn:hover {
+  background-color: var(--primary);
+  color: var(--bg-body);
 }
 
 /* --- Hero --- */
@@ -142,6 +89,7 @@ nav {
   text-align: center;
   justify-content: center;
 }
+
 .hero-title {
   font-size: 3.5rem;
   line-height: 1.1;
@@ -168,6 +116,7 @@ nav {
   justify-content: space-between;
   border: 1px solid transparent;
 }
+
 .project-card:hover {
   transform: translateY(-5px);
   border-color: var(--secondary);
@@ -177,6 +126,7 @@ nav {
   color: var(--primary);
   margin-bottom: 10px;
 }
+
 .project-desc {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -191,6 +141,7 @@ nav {
   border-top: 1px solid var(--shadow);
   padding-top: 15px;
 }
+
 .action-link {
   font-size: 0.85rem;
   font-weight: 600;
@@ -198,38 +149,51 @@ nav {
   display: flex;
   align-items: center;
   gap: 5px;
+  transition: var(--transition);
 }
+
 .action-link:hover {
   color: var(--primary);
 }
+
 .deploy-badge {
   color: #0070f3;
-} /* Cor azul característica da Vercel/Web */
+}
 
-/* --- Mobile Styles --- */
+/* --- Responsive Design --- */
 @media (max-width: 768px) {
-  .nav-links {
-    position: fixed;
-    top: 70px;
-    right: -100%;
-    width: 100%;
-    height: calc(100vh - 70px);
-    background: var(--bg-card);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: 0.4s ease;
+  body {
+    padding-top: 60px;
   }
-  .nav-links.active {
-    right: 0;
-  }
-  .mobile-btn {
-    display: block;
-  }
+
   .hero-title {
     font-size: 2.5rem;
   }
+
   .about-content {
     grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 56px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
   }
 }

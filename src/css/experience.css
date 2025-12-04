@@ -1,0 +1,100 @@
+/* Estilos específicos do componente Experience */
+
+/* Wrapper para alinhar o botão */
+.exp-button-wrapper {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Botão de alternância (Ver detalhes) */
+.exp-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.9rem;
+  border-radius: 50px; /* Borda totalmente arredondada (Pill shape) */
+  cursor: pointer;
+  border: 1px solid var(--color-secondary);
+  background-color: transparent;
+  color: var(--color-secondary);
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transição suave */
+  letter-spacing: 0.02em;
+}
+
+/* Estado Hover: Inversão de cores e sombra para destaque */
+.exp-toggle-btn:hover {
+  background-color: var(
+    --text-body
+  ); /* Usa a cor do texto principal (escuro no light, claro no dark) */
+  color: var(
+    --bg-body
+  ); /* Usa a cor de fundo para o texto (contraste garantido) */
+  border-color: var(--text-body);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave */
+  transform: translateY(-2px); /* Leve elevação */
+}
+
+/* Estado Active/Click */
+.exp-toggle-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto de resumo */
+.exp-summary-text {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Container do conteúdo expandido */
+.exp-details-content {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 3px solid rgba(123, 123, 123, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+/* Subtítulos dentro dos detalhes (Stack, Entregas, Resultados) */
+.exp-subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--text-body);
+  margin-top: 1.2rem;
+}
+
+/* Remove margem superior do primeiro subtítulo para alinhamento */
+.exp-subtitle:first-child {
+  margin-top: 0;
+}
+
+/* Texto descritivo dentro dos detalhes */
+.exp-text {
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-secondary);
+  line-height: 1.7;
+}
+
+/* Listas (ul) dentro dos detalhes */
+.exp-list {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+/* Itens da lista (li) */
+.exp-list-item {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  line-height: 1.6;
+}
+
+.exp-list:last-child {
+  margin-bottom: 0;
+}

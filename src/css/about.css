@@ -1,0 +1,132 @@
+/* Estilos específicos do componente About */
+
+/* Wrapper centralizado para conteúdo de texto */
+.about-content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho interno */
+.about-header-internal {
+  margin-bottom: 2.5rem;
+}
+
+.about-subtitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
+  color: var(--text-body);
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+}
+
+/* Blocos de texto */
+.about-text-block {
+  margin-bottom: 3rem;
+}
+
+.about-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.about-description strong {
+  color: var(--text-body);
+  font-weight: 600;
+}
+
+/* Grid de Diferenciais (Cards modernos) */
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 600px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.stat-card {
+  background-color: var(--bg-alt);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(123, 123, 123, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transição mais suave (bezier) */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  cursor: default;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* Sombra mais difusa no hover */
+  border-color: rgba(123, 123, 123, 0.3);
+}
+
+/* Animação do ícone no hover do card */
+.stat-card:hover .stat-icon {
+  background-color: var(--text-body);
+  color: var(--bg-body);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: rgba(123, 123, 123, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-body);
+  transition: all 0.3s ease; /* Transição suave para o ícone */
+}
+
+.stat-info h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-body);
+  margin-bottom: 0.25rem;
+}
+
+.stat-info p {
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  line-height: 1.4;
+}
+
+/* Botão de ação */
+.about-actions {
+  display: flex;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(123, 123, 123, 0.1);
+}

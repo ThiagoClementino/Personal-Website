@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import foto from "../img/perfil_foto.png";
 
 const Hero = () => {
   return (
@@ -18,12 +19,12 @@ const Hero = () => {
         >
           <span className="hero-greeting">OLÁ, EU SOU</span>
           <h1 className="hero-title">
-            João <br />
-            <span className="accent-text">Silva</span>
+            Thiago <br />
+            <span className="accent-text">Clementino</span>
           </h1>
           <p className="hero-description">
-            Desenvolvedor Full Stack apaixonado por criar experiências digitais
-            únicas, interfaces limpas e código performático.
+            Desenvolvedor Front-End. Conheça um pouco do meu trabalho e
+            conhecimento
           </p>
           <div className="hero-buttons">
             <a href="#projects" className="btn btn-primary">
@@ -35,13 +36,13 @@ const Hero = () => {
           </div>
 
           <div className="social-links">
-            <a href="#">
+            <a href="https://github.com/ThiagoClementino">
               <Github size={24} />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/in/thiago-clementino/">
               <Linkedin size={24} />
             </a>
-            <a href="#">
+            <a href="mailton:thidf57@gmail.com">
               <Mail size={24} />
             </a>
           </div>
@@ -54,11 +55,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="hero-image-frame">
-            <img
-              src="[https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80)"
-              alt="Foto de Perfil"
-              className="hero-image"
-            />
+            <img src={foto} alt="Foto de Perfil" className="hero-image" />
           </div>
           <motion.div
             animate={{ rotate: 360 }}

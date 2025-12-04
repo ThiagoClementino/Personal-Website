@@ -15,44 +15,46 @@ const Projects = () => {
       const mockProjects = [
         {
           id: 1,
-          name: "e-commerce-dashboard",
+          name: "Gestão de Membros",
           description:
-            "Painel administrativo completo com gráficos em tempo real e gestão de estoque.",
+            "Saas para gestão de participantes de igrejas e controle financeiro.",
           homepage:
-            "[https://demo-ecommerce.vercel.app](https://demo-ecommerce.vercel.app)",
+            "[https://gerenciamento-de-membros.vercel.app/](https://gerenciamento-de-membros.vercel.app/)",
           html_url:
-            "[https://github.com/demo/ecommerce](https://github.com/demo/ecommerce)",
-          topics: ["react", "nextjs", "analytics"],
+            "[https://github.com/ThiagoClementino/Gerenciamento-de-membros.git](https://github.com/ThiagoClementino/Gerenciamento-de-membros.git)",
+          topics: ["Reactjs", "JavaScript", "NodeJs", "Tailwind CSS"],
         },
         {
           id: 2,
-          name: "social-media-api",
-          description:
-            "Backend robusto para rede social com WebSockets e banco não relacional.",
+          name: "API - Gestão de usuários",
+          description: "ApiRest para gestão de acessos e criação de usuários",
           homepage:
-            "[https://api-docs.vercel.app](https://api-docs.vercel.app)",
+            "[https://usuarios-saas-g-membros.vercel.app/](https://usuarios-saas-g-membros.vercel.app/)",
           html_url:
-            "[https://github.com/demo/api](https://github.com/demo/api)",
-          topics: ["nodejs", "mongodb", "socket.io"],
+            "[https://github.com/ThiagoClementino/usuarios-saas-gMembros.git](https://github.com/ThiagoClementino/usuarios-saas-gMembros.git)",
+          topics: ["nodejs", "mongodb", "Express.js", "JWT", "Mongoose"],
         },
         {
           id: 3,
-          name: "finance-tracker-app",
+          name: "Formulário Externo :: Gestão de Membros.",
           description:
-            "PWA para controle financeiro pessoal com modo offline e sincronização.",
-          homepage: "[https://finance.vercel.app](https://finance.vercel.app)",
+            "Formulário socioeconomico para captar informações de possíveis membros em comunidades religiosas",
+          homepage:
+            "[https://formulario-externo-gereciamento-de-membros.vercel.app/](https://formulario-externo-gereciamento-de-membros.vercel.app/)",
           html_url:
             "[https://github.com/demo/finance](https://github.com/demo/finance)",
-          topics: ["pwa", "react", "firebase"],
+          topics: ["Reactjs", "JavaScript", "Tailwind CSS"],
         },
         {
           id: 4,
-          name: "ai-image-generator",
+          name: "Api Gestão de Membros e Financeiro",
           description:
-            "Interface para geração de imagens usando integração com OpenAI DALL-E.",
-          homepage: "[https://ai-gen.vercel.app](https://ai-gen.vercel.app)",
-          html_url: "[https://github.com/demo/ai](https://github.com/demo/ai)",
-          topics: ["ai", "integration", "css"],
+            "Criação, atualização e exclusão de cadastros de possíveis membros e lançamentos financeiros.",
+          homepage:
+            "[https://api-gestao-igreja-jcod.vercel.app/](https://api-gestao-igreja-jcod.vercel.app/)",
+          html_url:
+            "[https://github.com/ThiagoClementino/API_GESTAO_IGREJA.git](https://github.com/ThiagoClementino/API_GESTAO_IGREJA.git)",
+          topics: ["nodejs", "mongodb", "Express.js", "Mongoose"],
         },
       ];
 

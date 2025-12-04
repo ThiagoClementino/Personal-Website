@@ -15,6 +15,8 @@
   --bg-body: var(--color-light); /* #F8F8F8 */
   --text-body: var(--color-primary); /* #222222 */
   --bg-alt: var(--color-white); /* #FFFFFF */
+
+  /* No Light, o inverso é escuro para contraste */
   --bg-inverse: var(--color-primary); /* #222222 */
   --text-inverse: var(--color-light); /* #F8F8F8 */
 
@@ -33,8 +35,10 @@
   --bg-body: var(--color-primary); /* #222222 */
   --text-body: var(--color-light); /* #F8F8F8 */
   --bg-alt: #2a2a2a; /* Slightly lighter than primary */
-  --bg-inverse: var(--color-light); /* #F8F8F8 */
-  --text-inverse: var(--color-primary); /* #222222 */
+
+  /* CORREÇÃO: Mantém fundo escuro (tom mais profundo) no tema Dark */
+  --bg-inverse: #151515; /* #151515 (Darker) */
+  --text-inverse: var(--color-light); /* #F8F8F8 */
 
   --nav-bg: rgba(34, 34, 34, 0.9);
 
@@ -184,12 +188,17 @@ img {
   gap: 2rem;
 }
 
-@media (min-width: 768px) {
+/* CORREÇÃO: Alterado de 768px para 769px para incluir tablets (768px) no modo mobile */
+@media (min-width: 769px) {
   .desktop-menu {
     display: flex;
   }
   .mobile-toggle {
     display: none;
+  }
+  /* Adicionado para garantir que o menu mobile nunca apareça no desktop */
+  .mobile-menu {
+    display: none !important;
   }
 }
 
@@ -248,7 +257,7 @@ img {
 /* --- COMPONENTS: HERO --- */
 
 .hero-section {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -331,6 +340,9 @@ img {
   border: 4px solid rgba(123, 123, 123, 0.2);
   position: relative;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -460,7 +472,7 @@ img {
 
 .timeline-company {
   color: var(--color-secondary);
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
