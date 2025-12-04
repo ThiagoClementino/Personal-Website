@@ -39,7 +39,8 @@ const Projects = () => {
             "Formulário socioeconomico para captar informações de possíveis membros em comunidades religiosas",
           homepage:
             "https://formulario-externo-gereciamento-de-membros.vercel.app/",
-          html_url: "https://github.com/demo/finance",
+          html_url:
+            "https://github.com/ThiagoClementino/Gestor-de-Membros-formulario.git",
           topics: ["Reactjs", "JavaScript", "Tailwind CSS"],
         },
         {
