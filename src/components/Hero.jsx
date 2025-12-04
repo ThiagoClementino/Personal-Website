@@ -5,7 +5,7 @@ import foto from "../img/perfil_foto.png";
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero-section section-padding bg-alt">
+    <section id="hero" className="hero-section  bg-alt">
       {/* Background Decorativo */}
       <div className="bg-blur bg-blur-right" />
       <div className="bg-blur bg-blur-left" />

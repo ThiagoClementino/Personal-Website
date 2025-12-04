@@ -6,22 +6,16 @@ import SectionTitle from "./SectionTitle";
 const experienceData = [
   {
     id: 1,
-    role: "Analista de suporte ",
-    company: "Workalove Editech",
-    period: "Dez de 2024 - até o momento",
-    summary: "",
+    role: "Analista de Suporte",
+    company: "Workalove Edtech",
+    period: "Dez 2024 - Atual",
+    summary:
+      "Atuação consultiva no suporte técnico e Customer Success, com foco em análise de dados e otimização de fluxos.",
     details: {
-      // stack:
-      //   "MERN Stack (MongoDB, Express, React.js, Node.js), API RESTful, Git/GitHub, Figma.",
       deliverables: [
         "Gestão de Suporte e Customer Success: Atuação consultiva no suporte técnico a instituições e empresas (B2B/B2C), garantindo o cumprimento de SLAs e a otimização contínua dos fluxos de trabalho.",
-        "Análise de Dados e Inteligência: Monitoramento estratégico de KPIs e interpretação de cenários complexos, identificando padrões de uso para propor soluções proativas que elevam a eficiência operacional.",
-        "Relatórios Gerenciais e Melhoria Contínua: Desenvolvimento de dashboards executivos para mapeamento de pain points (dificuldades) dos usuários, implementando ações preventivas que impactam diretamente na retenção e na experiência do cliente.",
-      ],
-      results: [
-        "Transformação digital dos processos internos, eliminando controles manuais.",
-        "Aumento da transparência financeira e assertividade na tomada de decisões orçamentárias.",
-        "Melhoria significativa no engajamento da comunidade através de um acompanhamento personalizado dos membros.",
+        "Análise de Dados e Inteligência: Monitoramento estratégico de KPIs e interpretação de cenários complexos, identificando padrões de uso para propor soluções proativas.",
+        "Relatórios Gerenciais: Desenvolvimento de dashboards executivos para mapeamento de pain points dos usuários, implementando ações preventivas que impactam na retenção.",
       ],
     },
   },
@@ -29,63 +23,70 @@ const experienceData = [
     id: 2,
     role: "Desenvolvedor Web Freelancer",
     company: "Autônomo",
-    period: "2023 - Presente",
+    period: "Set 2023 - Atual",
     summary:
-      "Desenvolvimento e arquitetura de uma plataforma web completa (ERP) para gestão de membros e controle financeiro de uma organização sem fins lucrativos.",
+      "Desenvolvimento e arquitetura de uma plataforma web completa (ERP) para gestão de membros e controle financeiro.",
     details: {
       stack:
         "MERN Stack (MongoDB, Express, React.js, Node.js), API RESTful, Git/GitHub, Figma.",
       deliverables: [
-        "Front-end: Criação de interface responsiva e intuitiva (SPA) com React.js, focada na Experiência do Usuário (UX/UI) e visualização de dados.",
-        "Back-end: Desenvolvimento de API RESTful escalável com Node.js e Express, implementando regras de negócio complexas e autenticação segura de usuários.",
-        "Banco de Dados: Modelagem de dados NoSQL com MongoDB, garantindo flexibilidade e performance para o cadastro socioeconômico e financeiro.",
-        "Features: Implementação de Dashboards de performance, controle de fluxo de caixa (receitas/despesas) e gestão de perfis.",
+        "Front-end: Criação de interface responsiva e intuitiva (SPA) com React.js, focada na Experiência do Usuário (UX/UI).",
+        "Back-end: Desenvolvimento de API RESTful escalável com Node.js e Express, com autenticação segura.",
+        "Banco de Dados: Modelagem de dados NoSQL com MongoDB para cadastro socioeconômico e financeiro.",
+        "Features: Dashboards de performance, controle de fluxo de caixa e gestão de perfis.",
       ],
       results: [
         "Transformação digital dos processos internos, eliminando controles manuais.",
-        "Aumento da transparência financeira e assertividade na tomada de decisões orçamentárias.",
-        "Melhoria significativa no engajamento da comunidade através de um acompanhamento personalizado dos membros.",
+        "Aumento da transparência financeira e assertividade na tomada de decisões.",
+        "Melhoria no engajamento da comunidade através de acompanhamento personalizado.",
       ],
     },
   },
   {
-    id: 2,
-    role: "Analista de implantação Júnior",
+    id: 3,
+    role: "Analista de Implantação e Integração",
     company: "CRM Educacional",
-    period: "2021 - 2023",
+    period: "Jan 2021 - Dez 2023",
     summary:
-      "Analista de Implantação e Integração de Sistemas Foco: Microsoft Power Platform.",
+      "Implantação de sistemas com foco em Microsoft Power Platform, automação Low-Code e integração via APIs.",
     details: {
-      // stack:
-      //   "MERN Stack (MongoDB, Express, React.js, Node.js), API RESTful, Git/GitHub, Figma.",
       deliverables: [
-        "Desenvolvimento Low-Code e Automação: Criação de fluxos de trabalho complexos e regras de negócio automatizadas utilizando Power Automate, otimizando a comunicação e a mudança de status nos funis de captação.",
-        "Integração de Sistemas (APIs): Atuação técnica na integração entre o software proprietário e sistemas externos via consumo de APIs REST, garantindo a interoperabilidade dos dados.",
-        "Front-end e Customização: Desenvolvimento de formulários e interfaces personalizadas via Power Apps, adaptando a solução às diretrizes visuais e processuais de cada cliente.",
-        "Análise de Requisitos Técnicos: Mapeamento detalhado das necessidades de instituições de ensino para tradução em requisitos de sistema e configurações de banco de dados (entidades).",
-        "Análise de Requisitos Técnicos: Mapeamento detalhado das necessidades de instituições de ensino para tradução em requisitos de sistema e configurações de banco de dados (entidades).",
-      ],
-      results: [
-        "Transformação digital dos processos internos, eliminando controles manuais.",
-        "Aumento da transparência financeira e assertividade na tomada de decisões orçamentárias.",
-        "Melhoria significativa no engajamento da comunidade através de um acompanhamento personalizado dos membros.",
+        "Desenvolvimento Low-Code: Criação de fluxos complexos e regras de negócio com Power Automate, otimizando funis de captação.",
+        "Integração de Sistemas (APIs): Integração técnica entre software proprietário e sistemas externos via APIs REST.",
+        "Front-end e Customização: Desenvolvimento de interfaces personalizadas via Power Apps, adaptando às diretrizes visuais do cliente.",
+        "Análise de Requisitos: Mapeamento de necessidades para configurações de banco de dados e tradução em requisitos técnicos.",
+        "Dados e BI: Criação de dashboards e relatórios gerenciais para monitoramento de KPIs.",
       ],
     },
   },
   {
-    id: 2,
-    role: "Assistente administrativo de marketing",
-    company: "UNIvs",
-    period: "2018 - 2020",
-    summary: "Web Design",
+    id: 4,
+    role: "Analista de Marketing Digital & Web Design",
+    company: "Faculdade Vale do Salgado",
+    period: "Abr 2018 - Jan 2020",
+    summary:
+      "Desenvolvimento de interfaces web, gestão de CMS e estratégias de Inbound Marketing.",
     details: {
-      // stack:
-      //   "MERN Stack (MongoDB, Express, React.js, Node.js), API RESTful, Git/GitHub, Figma.",
       deliverables: [
-        " Desenvolvimento de Interfaces Web: Criação e implementação de Landing Pages e Hotsites responsivos (via RD Station), focados em UX/UI para maximizar a taxa de conversão (CRO).",
-        " Gestão de CMS (Blog): Estruturação e manutenção de blog corporativo para estratégias de Inbound Marketing e atração de tráfego orgânico.",
-        "Automação e CRM: Operação estratégica da plataforma CRM Educacional, garantindo a integridade dos dados e a gestão eficiente do funil de vendas.",
-        "Performance Digital: Planejamento e execução de campanhas de tráfego pago e orgânico, alinhado à gestão de mídias sociais para fortalecimento da marca.",
+        "Desenvolvimento de Interfaces Web: Criação de Landing Pages e Hotsites responsivos focados em UX/UI e conversão (CRO).",
+        "Gestão de CMS: Estruturação e manutenção de blog corporativo para estratégias de tráfego orgânico.",
+        "Automação e CRM: Operação estratégica da plataforma CRM Educacional e gestão do funil de vendas.",
+        "Performance Digital: Planejamento de campanhas de tráfego pago/orgânico e gestão de mídias sociais.",
+      ],
+    },
+  },
+  {
+    id: 5,
+    role: "Instrutor de Tecnologia e Design",
+    company: "LC INFORMÁTICA",
+    period: "Nov 2016 - Abr 2018",
+    summary:
+      "Ministração de treinamentos em tecnologia, produtividade e software de design gráfico.",
+    details: {
+      deliverables: [
+        "Capacitação Técnica: Treinamentos em alfabetização digital e ferramentas de produtividade (Pacote Office/Windows).",
+        "Ensino de Software de Design: Formação em Adobe Creative Suite (Photoshop, Illustrator, InDesign) e Corel Draw.",
+        "Metodologia: Desenvolvimento de planos de aula e exercícios práticos para fixação de conteúdo.",
       ],
     },
   },
@@ -95,32 +96,26 @@ const educationData = [
   {
     id: 1,
     degree: "Análise e Desenvolvimento de Sistemas",
-    school: "UNIBF",
-    year: "2026",
+    school: "Faculdade UniBF",
+    year: "2025",
   },
   {
     id: 2,
-    degree: "Design Thinking",
-    school: "TreinaWeb",
-    year: "2020",
+    degree: "PowerApps: Formação Básica",
+    school: "Certificação",
+    year: "Concluído",
   },
   {
     id: 3,
-    degree: "HTML E CSS",
-    school: "TreinaWeb",
-    year: "2020",
+    degree: "HTML e CSS",
+    school: "Certificação",
+    year: "Concluído",
   },
   {
     id: 4,
-    degree: "Curso de React - Fundamentos",
-    school: "TreinaWeb",
-    year: "2023",
-  },
-  {
-    id: 5,
-    degree: "Bootstrap 4 - Fundamentos",
-    school: "TreinaWeb",
-    year: "2020",
+    degree: "Design Thinking",
+    school: "Certificação",
+    year: "Concluído",
   },
 ];
 
@@ -196,57 +191,74 @@ const ExperienceItem = ({ exp, index }) => {
                   }}
                 >
                   {/* Stack */}
-
-                  <p
-                    className="timeline-desc"
-                    style={{ fontSize: "0.9rem", marginBottom: "1rem" }}
-                  >
-                    {exp.details.stack}
-                  </p>
+                  {exp.details.stack && (
+                    <p
+                      className="timeline-desc"
+                      style={{ fontSize: "0.9rem", marginBottom: "1rem" }}
+                    >
+                      <strong>Stack:</strong> {exp.details.stack}
+                    </p>
+                  )}
 
                   {/* Entregas */}
-                  <h5
-                    className="timeline-role"
-                    style={{ fontSize: "0.95rem", marginBottom: "0.5rem" }}
-                  >
-                    Principais Entregas:
-                  </h5>
-                  <ul
-                    style={{
-                      listStyleType: "disc",
-                      paddingLeft: "1.2rem",
-                      marginBottom: "1rem",
-                    }}
-                  >
-                    {exp.details.deliverables.map((item, i) => (
-                      <li
-                        key={i}
-                        className="timeline-desc"
-                        style={{ fontSize: "0.9rem", marginBottom: "0.25rem" }}
+                  {exp.details.deliverables && (
+                    <>
+                      <h5
+                        className="timeline-role"
+                        style={{ fontSize: "0.95rem", marginBottom: "0.5rem" }}
                       >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                        Principais Entregas:
+                      </h5>
+                      <ul
+                        style={{
+                          listStyleType: "disc",
+                          paddingLeft: "1.2rem",
+                          marginBottom: "1rem",
+                        }}
+                      >
+                        {exp.details.deliverables.map((item, i) => (
+                          <li
+                            key={i}
+                            className="timeline-desc"
+                            style={{
+                              fontSize: "0.9rem",
+                              marginBottom: "0.25rem",
+                            }}
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
 
                   {/* Resultados */}
-                  <h5
-                    className="timeline-role"
-                    style={{ fontSize: "0.95rem", marginBottom: "0.5rem" }}
-                  >
-                    Resultados:
-                  </h5>
-                  <ul style={{ listStyleType: "disc", paddingLeft: "1.2rem" }}>
-                    {exp.details.results.map((item, i) => (
-                      <li
-                        key={i}
-                        className="timeline-desc"
-                        style={{ fontSize: "0.9rem", marginBottom: "0.25rem" }}
+                  {exp.details.results && (
+                    <>
+                      <h5
+                        className="timeline-role"
+                        style={{ fontSize: "0.95rem", marginBottom: "0.5rem" }}
                       >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                        Resultados:
+                      </h5>
+                      <ul
+                        style={{ listStyleType: "disc", paddingLeft: "1.2rem" }}
+                      >
+                        {exp.details.results.map((item, i) => (
+                          <li
+                            key={i}
+                            className="timeline-desc"
+                            style={{
+                              fontSize: "0.9rem",
+                              marginBottom: "0.25rem",
+                            }}
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
                 </div>
               </motion.div>
             )}
@@ -303,14 +315,14 @@ const Experience = () => {
                 <h4 className="card-title">Skills Técnicas</h4>
                 <div className="skills-container">
                   {[
-                    "ReactJs",
+                    "React.js",
                     "Node.js",
-                    "Javascript",
                     "TypeScript",
-                    "CSS3",
-                    "Git",
-                    "MySQL",
+                    "MongoDB",
+                    "Power Platform",
+                    "UI/UX Design",
                     "Figma",
+                    "Git/GitHub",
                   ].map((skill) => (
                     <span key={skill} className="skill-tag">
                       {skill}
