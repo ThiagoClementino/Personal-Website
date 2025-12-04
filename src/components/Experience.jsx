@@ -102,19 +102,19 @@ const educationData = [
   {
     id: 2,
     degree: "PowerApps: Formação Básica",
-    school: "Certificação",
+    school: "Linkedin",
     year: "Concluído",
   },
   {
     id: 3,
     degree: "HTML e CSS",
-    school: "Certificação",
+    school: "TreinaWeb",
     year: "Concluído",
   },
   {
     id: 4,
     degree: "Design Thinking",
-    school: "Certificação",
+    school: "TreinaWeb",
     year: "Concluído",
   },
 ];
@@ -318,6 +318,7 @@ const Experience = () => {
                     "React.js",
                     "Node.js",
                     "TypeScript",
+                    "JavaScript",
                     "MongoDB",
                     "Power Platform",
                     "UI/UX Design",
