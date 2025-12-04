@@ -18,20 +18,18 @@ const Projects = () => {
           name: "Gestão de Membros",
           description:
             "Saas para gestão de participantes de igrejas e controle financeiro.",
-          homepage:
-            "[https://gerenciamento-de-membros.vercel.app/](https://gerenciamento-de-membros.vercel.app/)",
+          homepage: "https://gerenciamento-de-membros.vercel.app/",
           html_url:
-            "[https://github.com/ThiagoClementino/Gerenciamento-de-membros.git](https://github.com/ThiagoClementino/Gerenciamento-de-membros.git)",
+            "https://github.com/ThiagoClementino/Gerenciamento-de-membros.git",
           topics: ["Reactjs", "JavaScript", "NodeJs", "Tailwind CSS"],
         },
         {
           id: 2,
           name: "API - Gestão de usuários",
           description: "ApiRest para gestão de acessos e criação de usuários",
-          homepage:
-            "[https://usuarios-saas-g-membros.vercel.app/](https://usuarios-saas-g-membros.vercel.app/)",
+          homepage: "https://usuarios-saas-g-membros.vercel.app/",
           html_url:
-            "[https://github.com/ThiagoClementino/usuarios-saas-gMembros.git](https://github.com/ThiagoClementino/usuarios-saas-gMembros.git)",
+            "https://github.com/ThiagoClementino/usuarios-saas-gMembros.git",
           topics: ["nodejs", "mongodb", "Express.js", "JWT", "Mongoose"],
         },
         {
@@ -40,9 +38,8 @@ const Projects = () => {
           description:
             "Formulário socioeconomico para captar informações de possíveis membros em comunidades religiosas",
           homepage:
-            "[https://formulario-externo-gereciamento-de-membros.vercel.app/](https://formulario-externo-gereciamento-de-membros.vercel.app/)",
-          html_url:
-            "[https://github.com/demo/finance](https://github.com/demo/finance)",
+            "https://formulario-externo-gereciamento-de-membros.vercel.app/",
+          html_url: "https://github.com/demo/finance",
           topics: ["Reactjs", "JavaScript", "Tailwind CSS"],
         },
         {
@@ -50,10 +47,8 @@ const Projects = () => {
           name: "Api Gestão de Membros e Financeiro",
           description:
             "Criação, atualização e exclusão de cadastros de possíveis membros e lançamentos financeiros.",
-          homepage:
-            "[https://api-gestao-igreja-jcod.vercel.app/](https://api-gestao-igreja-jcod.vercel.app/)",
-          html_url:
-            "[https://github.com/ThiagoClementino/API_GESTAO_IGREJA.git](https://github.com/ThiagoClementino/API_GESTAO_IGREJA.git)",
+          homepage: "https://api-gestao-igreja-jcod.vercel.app/",
+          html_url: "https://github.com/ThiagoClementino/API_GESTAO_IGREJA.git",
           topics: ["nodejs", "mongodb", "Express.js", "Mongoose"],
         },
       ];
