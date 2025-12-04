@@ -5,11 +5,13 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container footer-content">
-        <p>&copy; {currentYear} João Silva. Todos os direitos reservados.</p>
+        <p>
+          &copy; {currentYear} Thiago Clementino. Todos os direitos reservados.
+        </p>
         <div className="footer-links">
-          <a href="#">GitHub</a>
-          <a href="#">LinkedIn</a>
-          <a href="#">Instagram</a>
+          <a href="https://github.com/ThiagoClementino">GitHub</a>
+          <a href="https://www.linkedin.com/in/thiago-clementino/">LinkedIn</a>
+          <a href="https://www.instagram.com/soul_thiago">Instagram</a>
         </div>
       </div>
     </footer>

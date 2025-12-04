@@ -2,12 +2,20 @@ import React, { useState, useEffect, useContext } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeContext } from "../context/ThemeContext";
-import "../Navbar.css";
+
+// Importação dos componentes
+import About from "./About";
+import Experience from "./Experience";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  // Nova section ativa
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -15,71 +23,67 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fechar menu ao redimensionar a janela para desktop
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setIsOpen(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  // Fechar menu ao clicar em um link
-  const handleNavClick = () => {
-    setIsOpen(false);
-  };
-
+  // Agora cada link aponta diretamente para um componente
   const navLinks = [
-    { name: "Sobre", href: "#about" },
-    { name: "Experiência", href: "#experience" },
-    { name: "Projetos", href: "#projects" },
-    { name: "Contato", href: "#contact" },
+    { name: "Início", component: "home" },
+    { name: "Sobre", component: "about" },
+    { name: "Experiência", component: "experience" },
+    { name: "Projetos", component: "projects" },
+    { name: "Contato", component: "contact" },
   ];
 
+  // Renderização da seção selecionada
+  const renderSection = () => {
+    switch (activeSection) {
+      case "about":
+        return <About />;
+      case "experience":
+        return <Experience />;
+      case "projects":
+        return <Projects />;
+      case "contact":
+        return <Contact />;
+      default:
+        return (
+          <div className="home-default">
+            <h1>Bem-vindo ao meu portfólio</h1>
+            <p>Selecione uma seção no menu.</p>
+          </div>
+        );
+    }
+  };
+
   return (
-    <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <nav className="navbar-container">
-        <div className="navbar-content">
-          <a href="#" className="navbar-logo">
-            THIAGO<span className="accent-text">.CLEMENTINO</span>
+    <>
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+        <div className="container navbar-content">
+          <a href="#" className="logo" onClick={() => setActiveSection("home")}>
+            DEV<span className="accent-text">.PORTFOLIO</span>
           </a>
 
           {/* Desktop Menu */}
-          <ul className="navbar-menu">
+          <div className="desktop-menu">
             {navLinks.map((link) => (
-              <li key={link.name}>
-                <a href={link.href} className="navbar-link">
-                  {link.name}
-                </a>
-              </li>
-            ))}
-            <li>
               <button
-                onClick={toggleTheme}
-                className="navbar-theme-btn"
-                aria-label="Toggle theme"
+                key={link.name}
+                className="nav-link"
+                onClick={() => setActiveSection(link.component)}
               >
-                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                {link.name}
               </button>
-            </li>
-          </ul>
+            ))}
 
-          {/* Mobile Menu Toggle */}
-          <div className="navbar-mobile-controls">
-            <button
-              onClick={toggleTheme}
-              className="navbar-theme-btn"
-              aria-label="Toggle theme"
-            >
+            <button onClick={toggleTheme} className="theme-toggle-btn">
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <button
-              className={`navbar-toggle ${isOpen ? "active" : ""}`}
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle mobile menu"
-            >
+          </div>
+
+          {/* Mobile Toggle */}
+          <div className="mobile-toggle">
+            <button onClick={toggleTheme} className="theme-toggle-btn">
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            <button onClick={() => setIsOpen(!isOpen)} className="menu-btn">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -92,27 +96,30 @@ const Navbar = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="navbar-mobile-menu"
+              className="mobile-menu"
             >
-              <ul className="navbar-mobile-links">
+              <div className="mobile-menu-links">
                 {navLinks.map((link) => (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="navbar-mobile-link"
-                      onClick={handleNavClick}
-                    >
-                      {link.name}
-                    </a>
-                  </li>
+                  <button
+                    key={link.name}
+                    onClick={() => {
+                      setActiveSection(link.component);
+                      setIsOpen(false);
+                    }}
+                    className="mobile-nav-link"
+                  >
+                    {link.name}
+                  </button>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
-    </header>
+
+      {/* Renderização da seção escolhida */}
+      <div className="section-container">{renderSection()}</div>
+    </>
   );
 };
 
