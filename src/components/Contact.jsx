@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-inverse">
+    <section id="contact" className="section-padding bg-alt">
       <div className="container">
         <div className="contact-wrapper">
           {/* Informações de Contato (Lado Esquerdo/Topo) */}
