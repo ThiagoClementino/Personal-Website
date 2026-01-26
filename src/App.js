@@ -1,27 +1,28 @@
 import React from "react";
-import { ThemeProvider } from "./context/ThemeContext";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import About from "./components/About";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const App = () => {
+// 1. Importe o seu Provider (ajuste o caminho conforme seu projeto)
+import { ThemeProvider } from "./context/ThemeContext";
+
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Gestor from "./components/Gestor";
+
+function App() {
   return (
+    // 2. O Provider deve ser o "pai" de todos que usam o contexto
     <ThemeProvider>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
+      <Router>
+        <Navbar /> {/* Agora o Navbar está DENTRO do Provider */}
+        <main className="pt-20">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projeto/gestor" element={<Gestor />} />
+          </Routes>
+        </main>
+      </Router>
     </ThemeProvider>
   );
-};
+}
 
 export default App;

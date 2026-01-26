@@ -319,6 +319,7 @@ const Experience = () => {
                     "Node.js",
                     "TypeScript",
                     "JavaScript",
+                    
                     "MongoDB",
                     "Power Platform",
                     "UI/UX Design",
