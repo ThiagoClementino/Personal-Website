@@ -43,9 +43,9 @@ const Navbar = () => {
     <header className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <nav className="navbar-container">
         <div className="navbar-content">
-          <a href="#" className="navbar-logo">
+          <p className="navbar-logo">
             THIAGO<span className="accent-text">.CLEMENTINO</span>
-          </a>
+          </p>
 
           {/* Desktop Menu */}
           <ul className="navbar-menu">
